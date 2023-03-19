@@ -1,0 +1,218 @@
+format = """$status\
+$username\
+$hostname\
+$shlvl\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$hg_branch\
+${custom.git_email}\
+$docker_context\
+$package\
+$cmake\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+$julia\
+$kotlin\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$purescript\
+$python\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$memory_usage\
+$kubernetes\
+$aws\
+$gcloud\
+$openstack\
+$env_var\
+$crystal\
+$custom\
+$cmd_duration\
+$line_break\
+$lua\
+$jobs\
+$battery\
+$time\
+$shell\
+$character"""
+
+scan_timeout = 10
+add_newline = false
+
+[line_break]
+disabled = false
+
+[character]
+format = '$symbol '
+success_symbol = '[🚀](bold yellow)'
+error_symbol = '[🔭](bold red)'
+vicmd_symbol = '[🚀](bold yellow)'
+disabled = false
+
+[status]
+format = """[(\
+$symbol $int( $common_meaning) \
+(\\(\uf0e7 $signal_number( $signal_name)\\)) \
+\n)]($style) """
+symbol = "\uf467"
+not_executable_symbol = "\uf5ac"
+not_found_symbol = "\uf002"
+sigint_symbol = "\ufb8a"
+signal_symbol = "\uf0e7"
+map_symbol = true
+recognize_signal_code = true
+disabled = false
+
+[aws]
+format = 'on [$symbol($profile )(\($region\) )]($style)'
+style = "blue dimmed"
+symbol = "☁️ "
+[aws.region_aliases]
+sa-east-1 = "sp-1"
+us-east-1 = "us-1"
+
+[cmd_duration]
+min_time = 2000 # Show command duration over this time
+format = 'took [$duration]($style) '
+style = 'yellow bold'
+show_milliseconds = false
+disabled = false
+show_notifications = false
+min_time_to_notify = 45000
+
+[directory]
+truncation_length = 4
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+style = 'bold purple'
+
+# [directory.substitutions]
+# "~/projects" = " "
+
+[memory_usage]
+threshold = 70
+format = '$symbol[$ram_pct]($style) '
+style = 'white dimmed'
+symbol = "\ue266 "
+disabled = false
+
+[package]
+format = '[$symbol$version]($style) '
+symbol = "📦 "
+style = 'dimmed yellow'
+display_private = false
+disabled = true
+
+[git_branch]
+format = "on [$symbol$branch]($style) "
+symbol = " "
+style = "italic #d29000"
+
+[git_commit]
+commit_hash_length = 8
+style = "bold white"
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count}"
+behind = "🐢 ×${count}"
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+untracked = "🛤️  ×${count}"
+stashed = "📦 "
+modified = "📝 ×${count}"
+staged = "🗃️  ×${count}"
+renamed = "📛 ×${count}"
+deleted = "🗑️  ×${count}"
+style = "bright-white"
+format = "$all_status$ahead_behind"
+disabled = true
+
+[nodejs]
+format = '| [$symbol($version )]($style)'
+version_format = 'v${major}'
+symbol = ' '
+style = 'dimmed green'
+disabled = false
+not_capable_style = 'dimmed green'
+detect_extensions = [
+    'js',
+    'mjs',
+    'cjs',
+    'ts',
+]
+detect_files = [
+    'package.json',
+    '.node-version',
+    '.nvmrc',
+]
+detect_folders = ['node_modules']
+
+[docker_context]
+format = "via [🐋 $context](blue bold)"
+
+[kubernetes]
+format = '» [⛵ $context](#33cccc bold)'
+disabled = false
+
+[kubernetes.context_aliases]
+"kind-.*" = "kdev"
+".*/az/.*" = "az"
+"arn:.*.:.*.:.*.:.*.:.*/(?P<var_cluster>[\\w-]+)" = "AWS::$var_cluster"
+"gke_.*_(?P<var_cluster>[\\w-]+)" = "gke-$var_cluster"
+
+[custom.git_email]
+disabled = true
+command = "git config user.email | sed 's/.*@//'"
+when = "git rev-parse --git-dir 2> /dev/null"
+format = " [$output]($style) ¦ "
+style = "bright-yellow italic"
+
+[custom.giturl]
+disabled = true
+description = "Display symbol for remote Git server"
+command = """
+GIT_REMOTE=$(command git ls-remote --get-url 2> /dev/null)
+if [[ "$GIT_REMOTE" =~ "github" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "gitlab" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "bitbucket" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "git" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+else
+    GIT_REMOTE_SYMBOL=" "
+fi
+echo "$GIT_REMOTE_SYMBOL "
+"""
+when = 'git rev-parse --is-inside-work-tree 2> /dev/null'
+format = "at $output  "
+
+[gcloud]
+disabled = true
+format = "[$symbol$active]($style) "
+style = "bold yellow"

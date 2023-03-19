@@ -1,0 +1,370 @@
+{
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "breadcrumbs.enabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.sortJSON": false,
+    "source.fixAll.eslint": false
+  },
+  "editor.semanticHighlighting.enabled": false,
+  "editor.tabSize": 2,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "line-thin",
+  "editor.detectIndentation": true,
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "editor.fontWeight": "500",
+  "editor.formatOnPaste": true,
+  "editor.guides.bracketPairs": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.largeFileOptimizations": false,
+  "editor.lineHeight": 26,
+  "editor.linkedEditing": true,
+  "editor.maxTokenizationLineLength": 400000,
+  "editor.minimap.enabled": false,
+  "editor.minimap.renderCharacters": false,
+  "editor.multiCursorModifier": "alt",
+  "editor.parameterHints.enabled": false,
+  "editor.quickSuggestions": {
+    "comments": false,
+    "other": true,
+    "strings": false
+  },
+  "editor.renderLineHighlight": "gutter",
+  "editor.rulers": [80, 120],
+  "editor.snippetSuggestions": "top",
+  "editor.suggestFontSize": 10,
+  "editor.suggestSelection": "first",
+  "editor.tabCompletion": "on",
+  "editor.wordBasedSuggestions": true,
+  "editor.emptySelectionClipboard": false,
+  "editor.quickSuggestionsDelay": 300,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "jsx-sublime-babel-tags": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "ejs": "html",
+    "erb": "erb",
+    "html": "html",
+    "javascript": "javascript",
+    "vue": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.format.enable": true,
+  "eslint.packageManager": "npm",
+  "explorer.autoReveal": true,
+  "terminal.integrated.showExitAlert": false,
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "package.json": ".gitignore, .parcelrc, .prettierrc, package-lock.json, .nvmrc, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .es",
+    "README.md": "CHANGELOG.md, LICENCE"
+  },
+  "extensions.ignoreRecommendations": false,
+  "files.associations": {
+    ".env.*": "dotenv",
+    ".prettierrc": "json",
+    ".sequelizerc": "javascript",
+    ".stylelintrc": "json"
+  },
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 5000,
+  "files.exclude": {
+    ".serverless": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/node_modules": true,
+    "dist": true
+  },
+  "files.insertFinalNewline": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/serverless/*/**": true,
+    "**/.webpack/*/**": true
+  },
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.ignoreRebaseWarning": true,
+  "html.format.enable": true,
+  "html.autoClosingTags": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.suggest.autoImports": true,
+  "javascript.autoClosingTags": true,
+  "javascript.validate.enable": true,
+  "json.maxItemsComputed": 30000,
+  "json.schemas": [],
+  "notebook.lineNumbers": "on",
+  "search.exclude": {
+    "**/bower_components": true,
+    "**/node_modules": true
+  },
+  "search.showLineNumbers": true,
+  "search.useGlobalIgnoreFiles": true,
+  "search.useIgnoreFiles": true,
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+  "terminal.integrated.lineHeight": 1,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.tabs.enabled": true,
+  "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO"],
+  "todo-tree.highlights.customHighlight": {
+    "BUG": {
+      "foreground": "orange",
+      "gutterIcon": true,
+      "icon": "squirrel",
+      "iconColour": "orange"
+    },
+    "FIXME": {
+      "foreground": "red",
+      "gutterIcon": true,
+      "iconColour": "red"
+    },
+    "HACK": {
+      "foreground": "white",
+      "gutterIcon": true,
+      "icon": "rocket",
+      "iconColour": "white"
+    },
+    "TODO": {
+      "gutterIcon": true,
+      "icon": "checklist"
+    }
+  },
+  "material-icon-theme.files.associations": {
+    "tsconfig.json": "tune",
+    "*.webpack.js": "webpack",
+    "*.proto": "3d",
+    "ormconfig.json": "database"
+  },
+  "todo-tree.highlights.defaultHighlight": {
+    "foreground": "green",
+    "type": "tag"
+  },
+  "material-icon-theme.activeIconPack": "nest",
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.suggest.autoImports": true,
+  "typescript.autoClosingTags": true,
+  "typescript.tsserver.log": "off",
+  "window.enableMenuBarMnemonics": false,
+  "window.title": "${rootPath}${separator}${activeEditorShort}${dirty}${separator}",
+  "window.titleBarStyle": "custom",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.tabSizing": "shrink",
+  "material-icon-theme.folders.associations": {
+    "adapters": "contract",
+    "grpc": "pipe",
+    "kube": "kubernetes",
+    "main": "lib",
+    "websockets": "pipe",
+    "implementations": "core",
+    "protos": "pipe",
+    "entities": "class",
+    "kafka": "pipe",
+    "use-cases": "functions",
+    "migrations": "tools",
+    "schemas": "class",
+    "useCases": "functions",
+    "eslint-config": "tools",
+    "typeorm": "database",
+    "_shared": "shared",
+    "mappers": "meta",
+    "fakes": "mock",
+    "modules": "components",
+    "subscribers": "messages",
+    "domain": "class",
+    "protocols": "contract",
+    "infra": "app",
+    "view-models": "views",
+    "presentation": "template",
+    "dtos": "typescript",
+    "http": "container",
+    "providers": "include",
+    "factories": "class",
+    "repositories": "mappings"
+  },
+  "yaml.customTags": [
+    "!And",
+    "!And sequence",
+    "!If",
+    "!If sequence",
+    "!Not",
+    "!Not sequence",
+    "!Equals",
+    "!Equals sequence",
+    "!Or",
+    "!Or sequence",
+    "!FindInMap",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Join",
+    "!Join sequence",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!Sub sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!ImportValue sequence",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Split sequence"
+  ],
+  "yaml.schemas": {
+    "file:///c%3A/Users/o_jp/.vscode/extensions/atlassian.atlascode-2.10.12/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "yaml.schemaStore.enable": false,
+  "zenMode.fullScreen": true,
+  "zenMode.hideActivityBar": false,
+  "zenMode.hideTabs": false,
+  "redhat.telemetry.enabled": true,
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "terminal.integrated.shellIntegration.enabled": true,
+  "editor.fontFamily": "Fira Code",
+  "hexeditor.columnWidth": 8,
+  "hexeditor.showDecodedText": true,
+  "hexeditor.defaultEndianness": "little",
+  "hexeditor.inspectorType": "aside",
+  "gitlens.codeLens.enabled": false,
+  "editor.suggest.showMethods": true,
+  "editor.suggest.preview": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "git.ignoreMissingGitWarning": true,
+  "http.proxyAuthorization": null,
+  "azureResourceGroups.groupBy": "resourceGroup",
+  "editor.stickyScroll.enabled": true,
+  "terminal-in-status-bar.statusBarAlignment": "right",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "material-icon-theme.languages.associations": {
+    "dotenv": "tune"
+  },
+  "update.mode": "start",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorCustomizations": {
+    "[Tokyo Night]": {
+      "foreground": "#959cbd",
+      "editorCodeLens.foreground": "#7982a9",
+      "window.activeBorder": "#ff0000",
+      "window.inactiveBorder": "#0000ff",
+      "panelTitle.activeBorder": "#3d59a1",
+      "panelTitle.activeForeground": "#bdc7f0",
+      "panelTitle.inactiveForeground": "#959cbd",
+      "tab.activeForeground": "#bdc7f0",
+      "tab.inactiveForeground": "#959cbd",
+      "breadcrumb.foreground": "#959cbd",
+      "breadcrumb.focusForeground": "#bdc7f0",
+      "breadcrumb.activeSelectionForeground": "#bdc7f0",
+      "statusBar.foreground": "#bdc7f0",
+      "list.focusForeground": "#bdc7f0",
+      "list.hoverForeground": "#bdc7f0",
+      "list.activeSelectionForeground": "#bdc7f0",
+      "list.inactiveSelectionForeground": "#bdc7f0",
+      "list.inactiveSelectionBackground": "#202330",
+      "sideBar.foreground": "#959cbd",
+      "dropdown.foreground": "#959cbd",
+      "menu.foreground": "#bdc7f0",
+      "menubar.selectionForeground": "#bdc7f0",
+      "input.foreground": "#959cbd",
+      "input.placeholderForeground": "#959cbd",
+      "activityBar.foreground": "#bdc7f0",
+      "activityBar.inactiveForeground": "#787c99",
+      "gitDecoration.ignoredResourceForeground": "#696d87"
+    }
+  },
+  "editor.tokenColorCustomizations": {
+    "[Tokyo Night]": {
+      // or "[Tokyo Night Storm]"
+      "textMateRules": [
+        {
+          "scope": [
+            "comment",
+            "meta.var.expr storage.type",
+            "keyword.control.flow",
+            "keyword.control.return",
+            "meta.directive.vue punctuation.separator.key-value.html",
+            "meta.directive.vue entity.other.attribute-name.html",
+            "tag.decorator.js entity.name.tag.js",
+            "tag.decorator.js punctuation.definition.tag.js",
+            "storage.modifier"
+          ],
+          "settings": {
+            "fontStyle": ""
+          }
+        }
+      ]
+    }
+  },
+  "azureFunctions.showProjectWarning": false,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": false,
+    "dockerfile": false
+  },
+  "remote.SSH.remotePlatform": {
+    "localhost": "linux"
+  },
+  "workbench.colorTheme": "Nebula",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "totalTypeScript.hideAllTips": false,
+  "totalTypeScript.hideBasicTips": true,
+  "editor.accessibilitySupport": "off",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "totalTypeScript.hiddenTips": [
+    "mapped-type",
+    "keyof",
+    "typeof",
+    "passing-generics-to-types",
+    "interface-with-generics",
+    "interface-with-multiple-generics"
+  ],
+  "window.zoomLevel": 2
+}

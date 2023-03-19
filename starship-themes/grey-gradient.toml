@@ -1,0 +1,139 @@
+# First Color: #5A5A79
+# Second Color: #585877
+# Third Color: #565674
+# Fourth Color: #535370
+# Fifth Color: #50506C
+# Sixth Color: #4C4C66
+# Seventh Color: #4A4A64
+# Eigth Color: #484861
+
+# Text Color: Dark - #272D37 | Light - #D8D8EF
+
+format = """
+[](fg:#5A5A79 bg:#585877)\
+$username\
+[](fg:#585877 bg:#565674)\
+${custom.git_email}\
+$directory\
+[](fg:#565674 bg:#535370)\
+$golang\
+$python\
+$nodejs\
+$rust\
+[](fg:#535370 bg:#50506C)\
+$git_branch\
+$git_status\
+[](fg:#484861 bg:#4A4A64)\
+$docker_context\
+$aws\
+$kubernetes\
+[](fg:#4A4A64 bg:#484861)\
+[ ](fg:#484861)\
+"""
+
+
+
+# Disable the blank line at the start of the prompt
+add_newline = true
+
+
+[env_var.STARSHIP_DISTRO]
+style = 'bg:#5A5A79 fg:#D8D8EF'
+variable = "STARSHIP_DISTRO"
+default = " "
+format = '[ ]($style)'
+
+[username]
+show_always = true
+style_user = "bg:#585877 fg:#D8D8EF"
+style_root = "bg:#585877 fg:#D8D8EF"
+format = '[$user]($style)'
+
+[directory]
+style = "bg:#565674 fg:#D8D8EF"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+#"~/projects" = ""
+"Documents" = "  "
+"Downloads" = "  "
+"Music" = "  "
+"Pictures" = "  "
+
+[aws]
+format = '[ $symbol $profile|$region]($style)'
+style = "bg:#484861 fg:#D8D8EF"
+symbol = ""
+[aws.region_aliases]
+sa-east-1 = "sp-1"
+us-east-1 = "us-1"
+
+[docker_context]
+symbol = " "
+style = "bg:#4A4A64 fg:#D8D8EF"
+format = '[ $symbol $context ]($style) $path'
+
+[git_branch]
+symbol = " "
+style = "bg:#4C4C66 fg:#D8D8EF"
+format = '[$symbol$branch]($style)'
+
+[git_status]
+style = "bg:#4C4C66 fg:#D8D8EF"
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#535370 fg:#D8D8EF"
+format = '[ $symbol  ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#535370 fg:#D8D8EF"
+format = '[$symbol($version) ]($style)'
+version_format = 'v${major}'
+not_capable_style = "bg:#535370 fg:#D8D8EF"
+detect_extensions = [
+    'js',
+    'mjs',
+    'cjs',
+    'ts',
+]
+detect_files = [
+    'package.json',
+    '.node-version',
+    '.nvmrc',
+]
+detect_folders = ['node_modules']
+
+[rust]
+symbol = " "
+style = "bg:#535370 fg:#D8D8EF"
+format = '[ $symbol  ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#4A4A64 fg:#D8D8EF"
+format = '[ $time ]($style)'
+
+[custom.git_email]
+disabled = false
+command = "git config user.email | sed 's/.*@//' | sed 's/.com//' | sed 's/.br//'"
+when = "git rev-parse --git-dir 2> /dev/null"
+format = "[ $output]($style)"
+style = "bg:#565674 fg:#D8D8EF"
+
+[kubernetes]
+format = '[  $context](bg:#0091AD)'
+disabled = false
+
+[kubernetes.context_aliases]
+"kind-.*" = "kdev"
+".*/az/.*" = "az"
+"arn:.*.:.*.:.*.:.*.:.*/(?P<var_cluster>[\\w-]+)" = "AWS::$var_cluster"
+"gke_.*_(?P<var_cluster>[\\w-]+)" = "gke-$var_cluster"
