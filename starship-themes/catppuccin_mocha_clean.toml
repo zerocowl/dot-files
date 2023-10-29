@@ -1,0 +1,184 @@
+# Sets user-defined palette
+palette = "catppuccin_mocha"
+
+# Setups
+
+format = """
+$username\
+$hostname\
+$shlvl\
+$directory\
+$git_branch\
+$git_commit\
+$git_status\
+${custom.git_email}\
+$java\
+$kotlin\
+$bun\
+$nodejs\
+$python\
+$rust\
+$golang\
+$terraform\
+$pulumi\
+$fill"""
+
+right_format  = """
+$docker_context\
+$kubernetes\
+$aws\
+$gcloud\
+$cmd_duration"""
+
+add_newline = false 
+
+[character]
+success_symbol = "[󰘧](green)"
+error_symbol = "[](pink)"
+vicmd_symbol = "[🚀](peach)"
+
+[fill]
+symbol = ' '
+style = "bg:base fg:text"
+
+[directory]
+truncation_length = 3
+truncation_symbol = '…/'
+format = "[$path ](bg:base fg:lavender bold)"
+style = "bg:none fg:base"
+
+[directory.substitutions]
+"~/projects/" = " "
+
+[cmd_duration]
+format = "took [$duration]($style) "
+style = "bg:base fg:text"
+
+[bun]
+format = "[ 󰇝 ](bg:base fg:text bold)[🍞$version](bg:base fg:peach)"
+version_format = " v${raw}"
+
+[nodejs]
+format = "[󰇝 ](bg:base fg:text bold)[$symbol($version)](bg:base fg:green)"
+version_format = " v${major}"
+symbol = ""
+style = "bg:base fg:text"
+detect_files = [
+    ".node-version",
+    ".nvmrc",
+]
+detect_folders = [""]
+
+[terraform]
+format = "[ 󰺍 ](bg:base fg:text bold)[ $workspace](bg:base fg:sapphire)"
+
+[pulumi]
+format = "[ 󰺍 ](bg:base fg:text bold)[$symbol$stack]($style)"
+style = "bg:base fg:red"
+
+[docker_context]
+format = "via [󰡨 $context]($style)"
+style = "bg:none fg:mauve"
+
+[kubernetes]
+format = "» [󱃾 $context]($style)"
+disabled = false
+style = "bg:none fg:mauve"
+
+[kubernetes.context_aliases]
+"kind-.*" = "kdev"
+".*/az/.*" = "az"
+"arn:.*.:.*.:.*.:.*.:.*/(?P<var_cluster>[\\w-]+)" = "AWS::$var_cluster"
+"gke_.*_(?P<var_cluster>[\\w-]+)" = "gke-$var_cluster"
+
+[aws]
+format = '[$symbol($profile)]($style)[(\($region\))]($style)'
+style = "bg:none fg:yellow"
+symbol = '󰸏 '
+[aws.region_aliases]
+sa-east-1 = "sp-1"
+us-east-1 = "us-1"
+us-east-2 = "us-2"
+
+[gcloud]
+disabled = true
+format = "[$symbol$active]($style) "
+style = "bg:none fg:yellow"
+
+[git_branch]
+format = "[on $symbol$branch]($style)"
+symbol = " "
+style = "bg:base fg:teal bold"
+
+[git_status]
+# $all status$ahead_behind
+format = "[ $all_status$ahead_behind](bg:base fg:yellow)"
+style = "bg:none fg:base"
+conflicted = "="
+ahead =	"⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+up_to_date = ""
+untracked = "?${count}"
+stashed = ""
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+deleted = "${count}"
+disabled = true
+
+[custom.git_email]
+disabled = true
+command = "git config user.email | sed 's/.*@//'"
+when = "git rev-parse --git-dir 2> /dev/null"
+format = " [$output]($style) ¦"
+style = "bright-yellow italic"
+
+[custom.giturl]
+disabled = true
+description = "Display symbol for remote Git server"
+command = """
+GIT_REMOTE=$(command git ls-remote --get-url 2> /dev/null)
+if [[ "$GIT_REMOTE" =~ "github" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "gitlab" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "bitbucket" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "git" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+else
+    GIT_REMOTE_SYMBOL=" "
+fi
+echo "$GIT_REMOTE_SYMBOL "
+"""
+when = "git rev-parse --is-inside-work-tree 2> /dev/null"
+format = "at $output  "
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
