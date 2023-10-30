@@ -51,7 +51,7 @@ style = "bg:none fg:base"
 "~/projects/" = " "
 
 [cmd_duration]
-format = "took [$duration]($style) "
+format = " took [$duration]($style)"
 style = "bg:base fg:text"
 
 [bun]
@@ -81,7 +81,7 @@ format = "via [󰡨 $context]($style)"
 style = "bg:none fg:mauve"
 
 [kubernetes]
-format = "» [󱃾 $context]($style)"
+format = "[󱃾 $context | ]($style)"
 disabled = false
 style = "bg:none fg:mauve"
 
@@ -106,7 +106,7 @@ format = "[$symbol$active]($style) "
 style = "bg:none fg:yellow"
 
 [git_branch]
-format = "[on $symbol$branch]($style)"
+format = "[on $symbol$branch ]($style)"
 symbol = " "
 style = "bg:base fg:teal bold"
 

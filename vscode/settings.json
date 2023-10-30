@@ -11,7 +11,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma",
@@ -32,7 +32,7 @@
   },
   "editor.semanticHighlighting.enabled": false,
   "editor.tabSize": 2,
-  "editor.cursorBlinking": "solid",
+  "editor.cursorBlinking": "smooth",
   "editor.cursorStyle": "line-thin",
   "editor.detectIndentation": true,
   "editor.fontLigatures": true,
@@ -83,7 +83,6 @@
     "typescriptreact"
   ],
   "eslint.format.enable": true,
-  "eslint.packageManager": "npm",
   "explorer.autoReveal": true,
   "terminal.integrated.showExitAlert": false,
   "explorer.compactFolders": false,
@@ -91,8 +90,8 @@
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
-    "package.json": ".gitignore, .parcelrc, .prettierrc, package-lock.json, .nvmrc, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .es",
-    "README.md": "CHANGELOG.md, LICENCE"
+    "package.json": "bun.lockb, .gitignore, .parcelrc, .prettierrc, package-lock.json, pnpm-lock.yaml, tsconfig.json, tsconfig.build.json, vite.config.ts, .eslintrc, .nvmrc, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .eslintrc.json, .eslintrc.js, .eslintrc.yaml, .eslintrc.yml, .eslintignore, .gitattributes, .gitignore, .npmignore, .travis.yml, .vscodeignore, .editorconfig, .es",
+    "README.md": "CHANGELOG.md, LICENCE, TODO.md"
   },
   "extensions.ignoreRecommendations": false,
   "files.associations": {
@@ -107,8 +106,8 @@
     ".serverless": true,
     "**/.DS_Store": true,
     "**/.git": true,
-    "**/node_modules": true,
-    "dist": true
+    "**/node_modules": true
+    //"dist": true
   },
   "files.insertFinalNewline": true,
   "files.watcherExclude": {
@@ -143,7 +142,6 @@
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.defaultProfile.linux": "zsh",
-  "terminal.integrated.gpuAcceleration": "off",
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.tabs.enabled": true,
   "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO"],
@@ -190,6 +188,28 @@
   "window.title": "${rootPath}${separator}${activeEditorShort}${dirty}${separator}",
   "window.titleBarStyle": "custom",
   "workbench.startupEditor": "newUntitledFile",
+  // "workbench.colorCustomizations": {
+  //   "editorCursor.foreground": "#ff6600",
+  //   "terminalCursor.foreground": "#ff6600",
+  //   "terminal.background": "#0a0d14",
+  //   "terminal.foreground": "#DEDDDA",
+  //   "terminal.ansiBlack": "#181B1E",
+  //   "terminal.ansiBrightBlack": "#181B1E",
+  //   "terminal.ansiBrightBlue": "#CF7832",
+  //   "terminal.ansiBrightCyan": "#D8434E",
+  //   "terminal.ansiBrightGreen": "#E25252",
+  //   "terminal.ansiBrightMagenta": "#E02C2C",
+  //   "terminal.ansiBrightRed": "#D5691F",
+  //   "terminal.ansiBrightWhite": "#D67D7D",
+  //   "terminal.ansiBrightYellow": "#DAA623",
+  //   "terminal.ansiBlue": "#CF7832",
+  //   "terminal.ansiCyan": "#D8434E",
+  //   "terminal.ansiGreen": "#E25252",
+  //   "terminal.ansiMagenta": "#E02C2C",
+  //   "terminal.ansiRed": "#D5691F",
+  //   "terminal.ansiWhite": "#D67D7D",
+  //   "terminal.ansiYellow": "#DAA623"
+  // },
   "workbench.editor.labelFormat": "short",
   "workbench.editor.tabSizing": "shrink",
   "material-icon-theme.folders.associations": {
@@ -265,8 +285,8 @@
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
   "terminal.integrated.shellIntegration.enabled": true,
-  "editor.fontFamily": "Fira Code",
-  "hexeditor.columnWidth": 8,
+  "editor.fontFamily": "FiraCode Nerd Font Mono",
+  "hexeditor.columnWidth": 12,
   "hexeditor.showDecodedText": true,
   "hexeditor.defaultEndianness": "little",
   "hexeditor.inspectorType": "aside",
@@ -279,7 +299,11 @@
   "azureResourceGroups.groupBy": "resourceGroup",
   "editor.stickyScroll.enabled": true,
   "terminal-in-status-bar.statusBarAlignment": "right",
-  "diffEditor.ignoreTrimWhitespace": false,
+  "vs-kubernetes": {
+    "vscode-kubernetes.helm-path.linux": "/home/zero/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm",
+    "vscode-kubernetes.minikube-path.linux": "/home/zero/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube",
+    "vs-kubernetes.minikube-show-information-expiration": "2022-11-26T04:44:02.382Z"
+  },
   "material-icon-theme.languages.associations": {
     "dotenv": "tune"
   },
@@ -341,16 +365,19 @@
   },
   "azureFunctions.showProjectWarning": false,
   "github.copilot.enable": {
-    "*": true,
-    "yaml": true,
+    "*": false,
     "plaintext": true,
-    "markdown": false,
-    "dockerfile": false
+    "markdown": true,
+    "scminput": false,
+    "yaml": true,
+    "dockerfile": true,
+    "sql": true,
+    "javascript": true,
+    "typescript": true
   },
   "remote.SSH.remotePlatform": {
     "localhost": "linux"
   },
-  "workbench.colorTheme": "Nebula",
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
@@ -364,7 +391,30 @@
     "typeof",
     "passing-generics-to-types",
     "interface-with-generics",
-    "interface-with-multiple-generics"
+    "interface-with-multiple-generics",
+    "tuple-type",
+    "partial-utility-type",
+    "type-alias-with-generics",
+    "conditional-type",
+    "nested-conditional-type",
+    "never-keyword",
+    "bigint",
+    "non-null-expression"
   ],
-  "window.zoomLevel": 2
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "workbench.colorTheme": "Mr Code Gunmetal",
+  "aws.suppressPrompts": {
+    "regionAddAutomatically": true
+  },
+  "workbench.productIconTheme": "fluent-icons",
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": true
+  },
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "window.zoomLevel": 1
 }
