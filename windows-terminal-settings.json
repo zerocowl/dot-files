@@ -61,33 +61,14 @@
   "profiles": {
     "defaults": {
       "backgroundImage": null,
+      "colorScheme": "Aurora",
       "font": {
-        "face": "FiraCode Nerd Font Mono"
+        "face": "IosevkaTerm Nerd Font Propo"
       },
       "opacity": 100,
       "useAtlasEngine": true
     },
     "list": [
-      {
-        "backgroundImage": null,
-        "colorScheme": "lovelace",
-        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-        "hidden": false,
-        "name": "Windows PowerShell",
-        "opacity": 100,
-        "useAcrylic": true
-      },
-      {
-        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-        "hidden": false,
-        "name": "Command Prompt"
-      },
-      {
-        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-        "hidden": false,
-        "name": "Azure Cloud Shell",
-        "source": "Windows.Terminal.Azure"
-      },
       {
         "adjustIndistinguishableColors": "always",
         "antialiasingMode": "grayscale",
@@ -95,7 +76,7 @@
         "backgroundImageAlignment": "top",
         "backgroundImageOpacity": 0.49,
         "backgroundImageStretchMode": "uniformToFill",
-        "colorScheme": "mars-legacy",
+        "colorScheme": "rose-pine",
         "commandline": "ubuntu.exe",
         "cursorShape": "bar",
         "experimental.retroTerminalEffect": false,
@@ -114,7 +95,7 @@
             "ss07": 1,
             "ss09": 1
           },
-          "size": 18.0,
+          "size": 14.0,
           "weight": "semi-light"
         },
         "guid": "{8bcba262-3f0a-4b05-a0aa-42c99c310d0e}",
@@ -123,13 +104,62 @@
         "intenseTextStyle": "none",
         "name": "C137",
         "opacity": 100,
-        "padding": "5",
+        "padding": "0",
         "scrollbarState": "hidden",
         "startingDirectory": "~",
         "suppressApplicationTitle": true,
         "tabTitle": "C137",
         "useAcrylic": false,
         "useAtlasEngine": true
+      },
+      {
+        "backgroundImage": null,
+        "colorScheme": "Firewatch",
+        "font": {
+          "size": 14.0
+        },
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "hidden": false,
+        "name": "Windows PowerShell",
+        "opacity": 100,
+        "scrollbarState": "hidden",
+        "useAcrylic": true
+      },
+      {
+        "colorScheme": "ForestBlue",
+        "font": {
+          "face": "IntoneMono Nerd Font Propo",
+          "size": 14.0
+        },
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "hidden": false,
+        "name": "Command Prompt"
+      },
+      {
+        "colorScheme": "Horizon",
+        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+        "hidden": false,
+        "name": "Azure Cloud Shell",
+        "source": "Windows.Terminal.Azure"
+      },
+      {
+        "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+        "hidden": false,
+        "name": "PowerShell",
+        "source": "Windows.Terminal.PowershellCore"
+      },
+      {
+        "guid": "{963ff2f7-6aed-5ce3-9d91-90d99571f53a}",
+        "hidden": true,
+        "name": "Ubuntu-24.04",
+        "source": "Windows.Terminal.Wsl"
+      },
+      {
+        "colorScheme": "Rapture",
+        "guid": "{acbafd15-cbbb-5bb3-8a61-bed446ff4b83}",
+        "hidden": false,
+        "name": "Ubuntu 24.04 LTS",
+        "source": "CanonicalGroupLimited.Ubuntu24.04LTS_79rhkp1fndgsc"
       }
     ]
   },
@@ -564,6 +594,29 @@
       "cyan": "#3A96DD",
       "foreground": "#FFFFFF",
       "green": "#26A269",
+      "name": "Ubuntu-24.04-ColorScheme",
+      "purple": "#881798",
+      "red": "#C21A23",
+      "selectionBackground": "#FFFFFF",
+      "white": "#CCCCCC",
+      "yellow": "#A2734C"
+    },
+    {
+      "background": "#300A24",
+      "black": "#171421",
+      "blue": "#0037DA",
+      "brightBlack": "#767676",
+      "brightBlue": "#08458F",
+      "brightCyan": "#2C9FB3",
+      "brightGreen": "#26A269",
+      "brightPurple": "#A347BA",
+      "brightRed": "#C01C28",
+      "brightWhite": "#F2F2F2",
+      "brightYellow": "#A2734C",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#3A96DD",
+      "foreground": "#FFFFFF",
+      "green": "#26A269",
       "name": "Ubuntu-ColorScheme",
       "purple": "#881798",
       "red": "#C21A23",
@@ -788,6 +841,7 @@
       "name": "Mica Theme",
       "tab": {
         "background": null,
+        "iconStyle": "default",
         "showCloseButton": "always",
         "unfocusedBackground": "#00000000"
       },
@@ -797,6 +851,9 @@
       },
       "window": {
         "applicationTheme": "dark",
+        "experimental.rainbowFrame": false,
+        "frame": null,
+        "unfocusedFrame": null,
         "useMica": true
       }
     }

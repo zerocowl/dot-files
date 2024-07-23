@@ -27,8 +27,8 @@
   "breadcrumbs.enabled": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.sortJSON": false,
-    "source.fixAll.eslint": false
+    "source.fixAll.sortJSON": "never",
+    "source.fixAll.eslint": "never"
   },
   "editor.semanticHighlighting.enabled": false,
   "editor.tabSize": 2,
@@ -36,13 +36,13 @@
   "editor.cursorStyle": "line-thin",
   "editor.detectIndentation": true,
   "editor.fontLigatures": true,
-  "editor.fontSize": 16,
+  "editor.fontSize": 18,
   "editor.fontWeight": "500",
   "editor.formatOnPaste": true,
   "editor.guides.bracketPairs": true,
   "editor.inlineSuggest.enabled": true,
   "editor.largeFileOptimizations": false,
-  "editor.lineHeight": 26,
+  "editor.lineHeight": 1.8,
   "editor.linkedEditing": true,
   "editor.maxTokenizationLineLength": 400000,
   "editor.minimap.enabled": false,
@@ -60,7 +60,7 @@
   "editor.suggestFontSize": 10,
   "editor.suggestSelection": "first",
   "editor.tabCompletion": "on",
-  "editor.wordBasedSuggestions": true,
+  "editor.wordBasedSuggestions": "matchingDocuments",
   "editor.emptySelectionClipboard": false,
   "editor.quickSuggestionsDelay": 300,
   "emmet.includeLanguages": {
@@ -212,6 +212,7 @@
   // },
   "workbench.editor.labelFormat": "short",
   "workbench.editor.tabSizing": "shrink",
+  "workbench.tree.enableStickyScroll": true,
   "material-icon-theme.folders.associations": {
     "adapters": "contract",
     "grpc": "pipe",
@@ -279,13 +280,12 @@
   "yaml.schemaStore.enable": false,
   "zenMode.fullScreen": true,
   "zenMode.hideActivityBar": false,
-  "zenMode.hideTabs": false,
   "redhat.telemetry.enabled": true,
   "[dockercompose]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
   "terminal.integrated.shellIntegration.enabled": true,
-  "editor.fontFamily": "FiraCode Nerd Font Mono",
+  "editor.fontFamily": "'JuliaMono Latin', 'JetBrainsMono NF', Consolas, 'Courier New', monospace",
   "hexeditor.columnWidth": 12,
   "hexeditor.showDecodedText": true,
   "hexeditor.defaultEndianness": "little",
@@ -295,6 +295,9 @@
   "editor.suggest.preview": true,
   "editor.acceptSuggestionOnEnter": "on",
   "git.ignoreMissingGitWarning": true,
+  "azure.resourceFilter": [
+    "512d5b6e-161e-43dd-91f9-2251196bdf4a/d8602793-4793-4ecb-99e9-63938116acf0"
+  ],
   "http.proxyAuthorization": null,
   "azureResourceGroups.groupBy": "resourceGroup",
   "editor.stickyScroll.enabled": true,
@@ -308,7 +311,7 @@
     "dotenv": "tune"
   },
   "update.mode": "start",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "catppuccin-perfect-mocha",
   "workbench.colorCustomizations": {
     "[Tokyo Night]": {
       "foreground": "#959cbd",
@@ -365,7 +368,7 @@
   },
   "azureFunctions.showProjectWarning": false,
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "plaintext": true,
     "markdown": true,
     "scminput": false,
@@ -373,7 +376,8 @@
     "dockerfile": true,
     "sql": true,
     "javascript": true,
-    "typescript": true
+    "typescript": true,
+    "bicep": true
   },
   "remote.SSH.remotePlatform": {
     "localhost": "linux"
@@ -384,6 +388,8 @@
   "totalTypeScript.hideAllTips": false,
   "totalTypeScript.hideBasicTips": true,
   "editor.accessibilitySupport": "off",
+  "azure-iot-toolkit.iotHubConsumerGroup": "teste",
+  "azure-iot-toolkit.iotHubD2CMessageStringify": true,
   "liveServer.settings.donotShowInfoMsg": true,
   "totalTypeScript.hiddenTips": [
     "mapped-type",
@@ -407,14 +413,17 @@
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
-  "workbench.colorTheme": "Mr Code Gunmetal",
+  "workbench.colorTheme": "Electron",
   "aws.suppressPrompts": {
     "regionAddAutomatically": true
   },
-  "workbench.productIconTheme": "fluent-icons",
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": true
   },
   "editor.unicodeHighlight.invisibleCharacters": false,
-  "window.zoomLevel": 1
+  "workbench.productIconTheme": "fluent-icons",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "window.zoomLevel": 0,
+  "prisma.showPrismaDataPlatformNotification": false,
+  "github.copilot.editor.enableAutoCompletions": true
 }

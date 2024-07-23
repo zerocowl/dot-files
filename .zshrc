@@ -5,12 +5,22 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # enabling some built-in features
-zstyle ':completion:*' menu select
+zstyle ':completion:*:*:*:*:*' menu select
 autoload -U compinit && compinit
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
-SAVEHIST=1000
+SAVEHIST="$HISTSIZE"
 setopt SHARE_HISTORY
+setopt INTERACTIVE_COMMENTS
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+
+# search history using Up and Down keys
+# >>> up arrow | down arrow
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
 # personal aliases
 alias cls="clear"
@@ -32,6 +42,7 @@ plugins=(
  docker
  docker-compose
  zsh-autosuggestions
+ terraform
 )
 zstyle :omz:plugins:ssh-agent identities github projectx companyy
 
@@ -48,9 +59,6 @@ add-zsh-hook chpwd set_aws_profile_based_on_dir
 set_aws_profile_based_on_dir
 
 eval "$(starship init zsh)"
-
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
@@ -74,3 +82,6 @@ esac
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+alias python=/usr/bin/python3”
+alias python=python3
+
