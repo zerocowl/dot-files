@@ -48,7 +48,7 @@ format = "[$path ](bg:base fg:lavender bold)"
 style = "bg:none fg:base"
 
 [directory.substitutions]
-"~/projects/" = " "
+"~/projects/" = "📚 "
 
 [cmd_duration]
 format = " took [$duration]($style)"
@@ -66,6 +66,8 @@ style = "bg:base fg:text"
 detect_files = [
     ".node-version",
     ".nvmrc",
+    "!bunfig.toml",
+    "!bun.lockb"
 ]
 detect_folders = [""]
 
@@ -81,24 +83,37 @@ format = "via [󰡨 $context]($style)"
 style = "bg:none fg:mauve"
 
 [kubernetes]
-format = "[󱃾 $context | ]($style)"
+format = "[󱃾 $context∫]($style)"
 disabled = false
 style = "bg:none fg:mauve"
 
-[kubernetes.context_aliases]
-"kind-.*" = "kdev"
-".*/az/.*" = "az"
-"arn:.*.:.*.:.*.:.*.:.*/(?P<var_cluster>[\\w-]+)" = "AWS::$var_cluster"
-"gke_.*_(?P<var_cluster>[\\w-]+)" = "gke-$var_cluster"
+[[kubernetes.contexts]]
+context_pattern  = "kind-.*"
+context_alias = "kdev"
+
+[[kubernetes.contexts]]
+context_pattern  = ".*/az/.*"
+context_alias = "az"
+
+[[kubernetes.contexts]]
+context_pattern  = "arn:.*.:.*.:.*.:.*.:.*/(?P<cluster>[\\w-]+)"
+context_alias = "AWS::${1}cluster"
+
+[[kubernetes.contexts]]
+context_pattern = "gke_.*_(?P<cluster>[\\w-]+)"
+context_alias = "gke-$cluster"
+
 
 [aws]
-format = '[$symbol($profile)]($style)[(\($region\))]($style)'
+format = '[$symbol$profile⁝($region)⌋]($style)'
 style = "bg:none fg:yellow"
-symbol = '󰸏 '
+symbol = '󰸏 ⌈'
 [aws.region_aliases]
-sa-east-1 = "sp-1"
-us-east-1 = "us-1"
-us-east-2 = "us-2"
+sa-east-1 = "sp1"
+us-east-1 = "us1"
+us-east-2 = "us2"
+[aws.profile_aliases]
+default = 'zero'
 
 [gcloud]
 disabled = true
